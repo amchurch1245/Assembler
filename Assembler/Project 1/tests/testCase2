@@ -1,0 +1,18 @@
+.data
+cry: .word 3, 6, 9
+
+
+.text
+_start:
+la t0, cry
+
+add t1, zero, t3
+xori zero, t3, -20
+lw t3, -100(t1)
+sub t3, zero, t1
+and t1, t3, zero
+add t3, t1, t1
+lui t1, 10
+or t1, t1, t3
+nop 
+ret
